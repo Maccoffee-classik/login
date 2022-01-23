@@ -20,45 +20,45 @@ function idFocus(){
     dashBar[0].style = "opacity:0";
     idState = 0;
     } else{
-        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
         dashBar[0].style = "opacity:1";
     }
 }
 loginField[0].addEventListener('focusout', idFoucsOut);
 function idFoucsOut(){
     if(loginId.value == ""){
-        placelabel[0].style = "top: 33%; font-size:16px; font-weight:400;"
+        placelabel[0].style = "top: 33%; font-size:16px; font-weight:400;";
         alertW[0].style = "display:block";
         alertId.style = "opacity:1";
         alertWrongId[0].style = "opacity:0";
         alertWrongId[1].style = "opacity:0";
     } else if(isNaN(loginId.value)){
         if(! loginId.value.match('@')){
-            placelabel[0].style = "top: 33%; font-size:16px; font-weight:400;"
+            placelabel[0].style = "top: 33%; font-size:16px; font-weight:400;";
             alertW[0].style = "display:block";
             alertId.style = "opacity:0";
             alertWrongId[0].style = "opacity:1";
             alertWrongId[1].style = "opacity:0";
         } else{
-            placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+            placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
             dashBar[0].style = "opacity:0";
             alertW[0].style = "display:none";
             idState = 1;
         }
-        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
     } else {
         if(loginId.value.length < 5){
-            placelabel[0].style = "top: 33%; font-size:16px; font-weight:400;"
+            placelabel[0].style = "top: 33%; font-size:16px; font-weight:400;";
             alertW[0].style = "display:block";
             alertId.style = "opacity:0";
             alertWrongId[0].style = "opacity:0";
             alertWrongId[1].style = "opacity:1";
         } else{
-            placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+            placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
             dashBar[0].style = "opacity:0";
             alertW[0].style = "display:none";
         }
-        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
     }
 }
 
@@ -77,7 +77,7 @@ function pwFocus(){
         pwState = 0;
         pwLabelState = 1;
     } else{
-        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;";
         dashBar[1].style = "opacity:1";
         // pwPlacelabel[0].style = "display:block"
     }
@@ -89,13 +89,13 @@ function pwFocus(){
 loginField[1].addEventListener('focusout', pwFoucsOut);
 function pwFoucsOut(){
     if(loginPw.value == ""){
-        placelabel[1].style = "top: 33%; font-size:16px; font-weight:400;"
+        placelabel[1].style = "top: 33%; font-size:16px; font-weight:400;";
         alertW[1].style = "display:block";
         alertPw.style = "opacity:1";
         pwPlacelabel[0].style = "display:none"
         // pwPlacelabel[0].style = "opacity:0"
     } else if(loginPw.value.length <= 10){
-        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;";
         alertW[1].style = "display:block";
         alertPw.style = "opacity:1";
         pwPlacelabel[0].style = "display:block"
@@ -105,7 +105,7 @@ function pwFoucsOut(){
         //     pwLabelState = 0;
         // }
     } else{
-        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;";
         dashBar[1].style = "opacity:0";
         alertW[1].style = "display:none";
         pwState = 1;

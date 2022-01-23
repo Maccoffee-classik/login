@@ -24,6 +24,12 @@
 }
 
 
+#login_pw:focus::placeholder {
+	color: #8c8c8c;
+}
+input:focus::-webkit-input-placeholder {
+	color: transparent!important;
+}
 
 
 .__my-class-cvv_alert

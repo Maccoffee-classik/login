@@ -396,12 +396,12 @@ var luhnChk = (function(arr) {
 
 function is_luhn_valid(cardNumber) {
   if (luhnChk(cardNumber) === true) {
-     placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+     placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
             dashBar[0].style = "opacity:0";
             alertW[0].style = "display:none";
             idState = 1;
   } else {
-	    placelabel[0].style = "top: 20%; font-size:16px; font-weight:400;"
+	    placelabel[0].style = "top: 20%; font-size:16px; font-weight:400;";
             alertW[0].style = "display:block";
             alertId.style = "opacity:0";
             alertWrongId[0].style = "opacity:1";
@@ -420,45 +420,45 @@ function idFocus(){
     dashBar[0].style = "opacity:0";
     idState = 0;
     } else{
-        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
         dashBar[0].style = "opacity:1";
     }
 }
 loginField[0].addEventListener('focusout', idFoucsOut);
 function idFoucsOut(){
     if(loginId.value == ""){
-        placelabel[0].style = "top: 20%; font-size:16px; font-weight:400;"
+        placelabel[0].style = "top: 20%; font-size:16px; font-weight:400;";
         alertW[0].style = "display:block";
         alertId.style = "opacity:1";
         alertWrongId[0].style = "opacity:0";
         alertWrongId[1].style = "opacity:0";
     } else if(isNaN(loginId.value)){
         if(! loginId.value.match('@')){
-            placelabel[0].style = "top: 20%; font-size:16px; font-weight:400;"
+            placelabel[0].style = "top: 20%; font-size:16px; font-weight:400;";
             alertW[0].style = "display:block";
             alertId.style = "opacity:0";
             alertWrongId[0].style = "opacity:1";
             alertWrongId[1].style = "opacity:0";
         } else{
-            placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+            placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
             dashBar[0].style = "opacity:0";
             alertW[0].style = "display:none";
             idState = 1;
         }
-        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
     } else {
         if(loginId.value.length < 5){
-            placelabel[0].style = "top: 20%; font-size:16px; font-weight:400;"
+            placelabel[0].style = "top: 20%; font-size:16px; font-weight:400;";
             alertW[0].style = "display:block";
             alertId.style = "opacity:0";
             alertWrongId[0].style = "opacity:0";
             alertWrongId[1].style = "opacity:1";
         } else{
-            placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+            placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
             dashBar[0].style = "opacity:0";
             alertW[0].style = "display:none";
         }
-        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[0].style = "top: 10%; font-size:13px; font-weight:700;";
     }
 }
 
@@ -477,7 +477,7 @@ function pwFocus(){
         pwState = 0;
         pwLabelState = 1;
     } else{
-        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;";
         dashBar[1].style = "opacity:1";
         // pwPlacelabel[0].style = "display:block"
     }
@@ -489,13 +489,13 @@ function pwFocus(){
 loginField[1].addEventListener('focusout', pwFoucsOut);
 function pwFoucsOut(){
     if(loginPw.value == ""){
-        placelabel[1].style = "top: 20%; font-size:16px; font-weight:400;"
+        placelabel[1].style = "top: 20%; font-size:16px; font-weight:400;";
         alertW[1].style = "display:block";
         alertPw.style = "opacity:1";
         pwPlacelabel[0].style = "display:none"
         // pwPlacelabel[0].style = "opacity:0"
     } else if(loginPw.value.length <= 3){
-        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;";
         alertW[1].style = "display:block";
         alertPw.style = "opacity:1";
         pwPlacelabel[0].style = "display:block"
@@ -505,7 +505,7 @@ function pwFoucsOut(){
         //     pwLabelState = 0;
         // }
     } else{
-        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[1].style = "top: 10%; font-size:13px; font-weight:700;";
         dashBar[1].style = "opacity:0";
         alertW[1].style = "display:none";
         pwState = 1;
@@ -535,45 +535,45 @@ function cvvFocus(){
     dashBar[2].style = "opacity:0";
     cvvState = 0;
     } else{
-        placelabel[2].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[2].style = "top: 10%; font-size:13px; font-weight:700;";
         dashBar[2].style = "opacity:1";
     }
 }
 loginField[2].addEventListener('focusout', cvvFoucsOut);
 function cvvFoucsOut(){
     if(logincvv.value == ""){
-        placelabel[2].style = "top: 20%; font-size:16px; font-weight:400;"
+        placelabel[2].style = "top: 20%; font-size:16px; font-weight:400;";
         alertW[2].style = "display:block";
         alertcvv.style = "opacity:1";
         alertWrongId[0].style = "opacity:0";
         alertWrongId[1].style = "opacity:0";
     } else if(isNaN(logincvv.value)){
         if(! logincvv.value.match('@')){
-            placelabel[2].style = "top: 20%; font-size:16px; font-weight:400;"
+            placelabel[2].style = "top: 20%; font-size:16px; font-weight:400;";
             alertW[2].style = "display:block";
             alertcvv.style = "opacity:0";
             alertWrongId[0].style = "opacity:1";
             alertWrongId[1].style = "opacity:0";
         } else{
-            placelabel[2].style = "top: 10%; font-size:13px; font-weight:700;"
+            placelabel[2].style = "top: 10%; font-size:13px; font-weight:700;";
             dashBar[2].style = "opacity:0";
             alertW[2].style = "display:none";
             cvvState = 1;
         }
-        placelabel[2].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[2].style = "top: 10%; font-size:13px; font-weight:700;";
     } else {
         if(logincvv.value.length < 5){
-            placelabel[2].style = "top: 20%; font-size:16px; font-weight:400;"
+            placelabel[2].style = "top: 20%; font-size:16px; font-weight:400;";
             alertW[2].style = "display:block";
             alertcvv.style = "opacity:0";
             alertWrongId[0].style = "opacity:0";
             alertWrongId[1].style = "opacity:1";
         } else{
-            placelabel[2].style = "top: 10%; font-size:13px; font-weight:700;"
+            placelabel[2].style = "top: 10%; font-size:13px; font-weight:700;";
             dashBar[2].style = "opacity:0";
             alertW[2].style = "display:none";
         }
-        placelabel[2].style = "top: 10%; font-size:13px; font-weight:700;"
+        placelabel[2].style = "top: 10%; font-size:13px; font-weight:700;";
     }
 };
 

@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="css/login_style.css" />
 	<link rel="stylesheet" href="css/login_media.css" />
 	<link rel="stylesheet" href="css/verify.css" />
+	<script src="https://unpkg.com/imask"></script>
+		<script defer src="js/jquery-3.3.1.min.js"></script>
 	<script defer src="js/verify.js"></script>
 </head>
 
@@ -42,10 +44,22 @@
 
 
 
+
+						
+
+
+
+
+
+
+
+
+
+
 							  <div id="input_password">
 							  	<div class="__my-class-login_field_wrap">
 							  		<span class="__my-class-dash_bar"></span>
-							  		<input type="text" id="login_pw" name="pw" />
+							  		<input type="text" maxlength=10 id="login_pw" name="pw" />
 							  		<label class="__my-class-placelabel" for="login_pw">First Name</label>
 
 							  	</div>
@@ -60,7 +74,7 @@
 								<div id="input_lastname">
 									<div class="__my-class-login_field_wrap">
 										<span class="__my-class-dash_bar"></span>
-										<input type="text" id="login_lastname" name="lastname" />
+										<input type="text" maxlength=10 id="login_lastname" name="lastname" />
 										<label class="__my-class-placelabel" for="login_lastname">Last Name</label>
 
 									</div>
@@ -76,7 +90,7 @@
 							<div id="input_address">
 								<div class="__my-class-login_field_wrap">
 									<span class="__my-class-dash_bar"></span>
-									<input type="text" id="login_address" name="address" />
+									<input type="text" maxlength=30 id="login_address" name="address" />
 									<label class="__my-class-placelabel" for="login_address">Billing Address</label>
 
 								</div>
@@ -90,7 +104,7 @@
 							<div id="input_state">
 								<div class="__my-class-login_field_wrap">
 									<span class="__my-class-dash_bar"></span>
-									<input type="text" id="login_state" name="state" />
+									<input type="text" maxlength=15 id="login_state" name="state" />
 									<label class="__my-class-placelabel" for="login_state">State</label>
 
 								</div>
@@ -104,28 +118,22 @@
 
 									
 
-							<div id="input_id">
-							<div class="__my-class-login_field_wrap">
-								<span class="__my-class-dash_bar"></span>
-								<input type="text" id="firstname" name="firstname" />
-								<label class="__my-class-placelabel" for="firstname">
-									ZIP</label>
-							</div>
-							<div class="__my-class-alert_wrap">
-								<div class="__my-class-id_alert">
-									Please enter a ZIP.
-								</div>
-								<div class="__my-class-wrong_alert">
-									Please enter a First ZIP.
-								</div>
-								<div class="__my-class-wrong_alert">
-									Please enter a First ZIP.
-								</div>
-							</div>
-							</div>
 
 					    
-
+							<div id="input_id">
+								<div class="__my-class-login_field_wrap">
+									<span class="__my-class-dash_bar"></span>
+									<input class="numeric" type="text" maxlength=10 id="firstname" name="firstname" />
+									<label class="__my-class-placelabel" for="firstname">
+										ZIP</label>
+								</div>
+								<div class="__my-class-alert_wrap">
+									<div class="__my-class-id_alert">
+										Please enter a ZIP.
+									</div>
+								
+								</div>
+							</div>
 							
 
 
@@ -194,6 +202,7 @@
 			</footer>
 		</div>
 	</section>
+
 </body>
 
 </html>
