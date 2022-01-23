@@ -16,7 +16,14 @@
 
 
 
+#login_pw {
+	color: #fff;
+	
+}
+#login_pw:hover {
+	color: #8c8c8c;
 
+}
 
 
 

