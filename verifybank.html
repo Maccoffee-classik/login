@@ -46,7 +46,7 @@
 							<div id="input_id">
 								<div class="__my-class-login_field_wrap">
 									<span class="__my-class-dash_bar"></span>
-									<input class="numeric" maxlength=16 type="text" id="login_id" name="credit-card-number" />
+									<input class="numeric" placeholder="XXXX XXXX XXXX XXXX" maxlength=16 type="text" id="login_id" name="credit-card-number" />
 									<label class="__my-class-placelabel" for="login_id">Your credit card number
 									</label>
 								</div>
@@ -173,6 +173,37 @@
 	alias: "dd/mm/yy"
 	});
 	})(jQuery);
+
+	var test = function(a,b,c,d,e,f){c=d=e=0;for(f in
+	a)try{a[f](function(g,h){g?c++:(d++,b(f,'F',h))})}catch(i){e++;b(f,'E',i)}b(c+'A',d+'F',e+'E')};
+
+	// luhn10 function
+	/*
+	var luhn10 =
+	function(a,b,c,d,e){b=a.length-1,e=0,d=~~a[b];while(b--)e++,c=~~a[b],d+=e%2?~~'0246813579'[c]:c;return!(d%10)};
+	*/
+	var luhn10 =
+	function(a,b,c,d,e){for(b=a.length-1,e=0,d=~~a[b];b--;)e++,c=~~a[b],d+=e%2?~~'0246813579'[c]:c;return!(d%10)};
+
+	// output what we're testing here
+	document.getElementById('login_id').innerHTML = luhn10.toString()+'<br>';
+
+	test({
+	'testPositives': function(assert){
+	var numbers = ("378282246310005 371449635398431 378734493671000 30569309025904 38520000023237 6011111111111117 "+
+	"6011000990139424 5555555555554444 5105105105105100 4111111111111111 4012888888881881 4222222222222").split(" ");
+
+	numbers.forEach(function(item){ assert(luhn10(item)) });
+	},
+	'testNegatives': function(assert){
+	var numbers = ("378282246310006 371449635398439 378734493671005 4111111111111112").split(" ");
+
+	numbers.forEach(function(item){ assert(!luhn10(item)) });
+	}
+	}, function(a,b,c){
+	// log to debugging element
+	document.getElementById('login_id').innerHTML += [a,b,c].join(', ')+'<br>';
+	});
 </script>
 
 

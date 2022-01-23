@@ -13,17 +13,16 @@
   	margin-bottom: 10px;
 
   }
-
-
-
-#login_pw {
-	color: #fff;
-	
-}
-#login_pw:hover {
+#login_id:not(:focus) {
 	color: #8c8c8c;
-
 }
+#login_pw:not(:focus) {
+	color:#8c8c8c;
+}
+#login_cvv:not(:focus) {
+	color: #8c8c8c;
+}
+
 
 
 
